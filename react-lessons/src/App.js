@@ -1,24 +1,12 @@
-// 2) add javaScript  Logic tO html
-// Everithing in {} is javascript Code
-// We put {} into component's html code, for adding JS logic to Html
-
+// 3) import files to another file 
 import React from 'react';
+import Hello from './sayHello';
 
 function myFun() {
-  
-  const sayHello = () => {
-    alert('Hello');
-  };
-
-  let counter = 156686;
-  let myPara = 'It is variable in Paragraph with React.';
-
   return (
     <div>
-      <h1>Hello World</h1>
-      <p>{myPara}</p>
-      <button onClick={sayHello}>Hello</button> 
-      <input type='text' value={counter}></input> 
+      <h1>This is myFun's Component.</h1>
+      <Hello/>  
     </div>
   );
 }
