@@ -1,17 +1,24 @@
 // 3) import files to another file 
-import React from 'react';
+import React, {useState} from 'react';
 import Hello from './sayHello';
 
 
-function myFun() {
+function MyFun() {
+  const [isRed, setRed] = useState(false);
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+    setRed(!isRed);
+  };
+
   return (
     <div className='height_App'>
-      <Hello name='Dev Ed' message='Good morning' numberLikes='128K' btnValue='Dev Says:' />  
-      <Hello name='Mosh' message='Good Night' numberLikes='232K' btnValue='Mosh Says:' />  
-      <Hello name='Winter is Coming' message='Happy Birthday' numberLikes='70K' btnValue='Winter Says:' />  
-      <Hello name='Gulfo' message='Happy new Year' numberLikes='12K' btnValue='Gulfo Says:' />  
+      <h1 className={isRed ? "red" : ""}>Change My Color!</h1>
+      <button onClick={increment}>Increment</button>
+      <h1>{count}</h1>
     </div>
   );
 }
 
-export default myFun;
+export default MyFun;
