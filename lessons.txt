@@ -1,0 +1,20 @@
+
+----------------Install initial React files:----------------
+npx create-react-app app-name
+cd app-name
+npm start
+------------------------------------------------------------
+
+----------------------Create Component:---------------------
+import React from 'react';
+
+function myFun() {
+  return (
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  );
+}
+
+export default myFun;
+------------------------------------------------------------
