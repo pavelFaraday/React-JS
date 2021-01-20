@@ -1,11 +1,13 @@
 .height_App {
-	height: 100vh;
+	min-height: 100vh;
 	background-color: rgb(202, 202, 202);
+	display: flex;
+	justify-content: space-around;
 }
 
 .bordRed {
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 	display: flex;
 	background-color: antiquewhite;
 	border-radius: 30px;
