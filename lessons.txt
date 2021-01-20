@@ -5,6 +5,7 @@ cd app-name
 npm start
 ------------------------------------------------------------
 
+
 ----------------------Create Component:---------------------
 import React from 'react';
 
@@ -17,4 +18,13 @@ function myFun() {
 }
 
 export default myFun;
+------------------------------------------------------------
+
+
+-----------------add javaScript Logic tO html---------------
+** Everithing in {} is javascript Code
+** We put {} into component's html code, for adding JS logic to Html
+
+<p>{myPara}</p>
+<button onClick={sayHello}>Hello</button> 
 ------------------------------------------------------------
