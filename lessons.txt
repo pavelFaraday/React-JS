@@ -28,3 +28,12 @@ export default myFun;
 <p>{myPara}</p>
 <button onClick={sayHello}>Hello</button> 
 ------------------------------------------------------------
+
+
+---------------------How add Css styles---------------------
+import './App.css';
+** we modify "App.css" 
+** for global Styles modify "index.css" 
+
+ <div className='bordRed'>
+ ------------------------------------------------------------

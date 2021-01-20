@@ -4,7 +4,7 @@ import Hello from './sayHello';
 
 function myFun() {
   return (
-    <div>
+    <div className='height_App'>
       <h1>This is myFun's Component.</h1>
       <Hello/>  
     </div>
