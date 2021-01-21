@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from './Button' 
+
 
 const Header = ({title}) => {
-    return (
-        <header>
-            {/* inline Styles */}
-            <h1 style={{color: 'red', border: '1px solid blue', background: 'black' }}>{title}</h1>
+    const myFun = () => {
+        console.log('Click');
+    }
 
-            {/* Internal Styles */}
-            <p style={ParaStyle}>I am Styled too</p>
+    return (
+        <header className='header'>
+            <h1>{title}</h1>
+            <Button color='green' text='add' onClick={myFun} />
         </header>
     )
 }
@@ -21,12 +24,6 @@ Header.defaultProps = {
 // propTypes
 Header.propTypes = {
     title: PropTypes.string,
-}
-
-// Internal Styles
-const ParaStyle = {
-    color: 'blue',
-    fontWeight: 'bold'
 }
 
 
