@@ -6,6 +6,14 @@ npm start
 ------------------------------------------------------------
 
 
+----------------------Install React Icons:---------------------
+cd app-name
+npm i react-icons
+
+
+--import icons:
+import { FaTimes} from 'react-icons/fa'
+
 ----------------------Create Component:---------------------
 import React from 'react';
 
