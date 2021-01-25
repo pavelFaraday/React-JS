@@ -1,31 +1,39 @@
-// </React.Fragment> --- When we want not to display parent div
-
 import React, { Component } from 'react'
 
 class Counter extends Component {
     state = {
         count: 0,
-        tags: ['tag1', 'tag2', 'tag3']
     }
 
-    renderTags() {
-        if (this.state.tags.length === 0) {
-            return <p>There are no Tags!</p>
-        } else {
-            return  <ul>
-                      {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
-                    </ul>
-        }
+    styles = {
+        fontSize: 14,
+        fontWeight: 'bold'
+    };
+
+    // you must bind every Event to 'this' keyword with constructor function
+    constructor() {
+        super();
+        this.handleIncrement = this.handleIncrement.bind(this); 
+    }
+
+    handleIncrement () {
+        console.log('I handle', this);
     }
 
     render() { 
         return (
         <React.Fragment>
-            {this.state.tags.length === 0 && 'Please, create new tag!'}
-            {this.renderTags()}
+            <span style={this.styles} className='badge badge-primary m-2'>{this.formatCount()}</span>
+            <button onClick={this.handleIncrement} className='btn btn-secondary btn-sm'>Increment</button>
         </React.Fragment>
         )
     }
+
+    formatCount () {
+        const { count } = this.state;
+        return count === 0 ? 'Zero' : count;
+    }
+
 }
  
 export default Counter;
