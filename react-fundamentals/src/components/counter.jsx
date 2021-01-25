@@ -11,12 +11,13 @@ class Counter extends Component {
     };
 
     // you must bind every Event to 'this' keyword with constructor function
-    constructor() {
+  /*   constructor() {
         super();
         this.handleIncrement = this.handleIncrement.bind(this); 
-    }
+    } */
 
-    handleIncrement () {
+    // or remake event into an arrow function
+    handleIncrement = () => {
         console.log('I handle', this);
     }
 
