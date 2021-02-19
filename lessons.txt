@@ -14,6 +14,7 @@ npm i bootstrap@4.1.1
 in app-name/src/index.js
 import 'bootstrap/dist/css/bootstrap.css'
 
+
 ----------------------Install React locally Icons:---------------------
 cd app-name
 npm i react-icons
